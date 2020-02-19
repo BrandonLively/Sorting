@@ -34,10 +34,9 @@ def merge(arrA, arrB):
 def merge_sort(arr):
     # TO-DO
     if len(arr) > 1:
-        arrA = arr[:len(arr) / 2 - 1]
-        arrB = arr[len(arr) / 2:]
-        merge_sort(arrA)
-        merge_sort(arrB)
+        arrA = arr[:len(arr) // 2]
+        arrB = arr[len(arr) // 2:]
+        return merge(merge_sort(arrA),merge_sort(arrB))
     else:
         return arr
 
