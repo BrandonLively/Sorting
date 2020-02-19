@@ -15,10 +15,7 @@ def merge(arrA, arrB):
             counter += 1
             arr_a_complete = False
 
-    if arr_a_complete:
-        merged_arr[counter:] = arrB[j:]
-    else:
-        merged_arr[counter:] = arrA[i:]
+    merged_arr[counter:] = arrB[j:] if arr_a_complete else arrA[i:]
     return merged_arr
 
 
